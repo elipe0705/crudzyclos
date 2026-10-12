@@ -1,0 +1,14 @@
+package br.com.zyclos.dto.request;
+
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
+
+/** Troca de senha feita pelo usuario autenticado. */
+public record AlterarSenhaRequest(
+        @NotBlank(message = "Informe a senha atual.")
+        String senhaAtual,
+
+        @NotBlank(message = "Informe a nova senha.")
+        @Size(min = 8, max = 72, message = "A senha deve ter pelo menos 8 caracteres.")
+        String novaSenha) {
+}

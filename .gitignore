@@ -1,0 +1,14 @@
+target/
+dados/
+*.log
+
+# IDEs
+.idea/
+*.iml
+.vscode/
+.settings/
+.classpath
+.project
+
+# Maven wrapper baixa a distribuicao aqui
+.mvn/wrapper/maven-wrapper.jar
