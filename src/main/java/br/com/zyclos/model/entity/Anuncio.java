@@ -15,7 +15,7 @@ public class Anuncio {
     private String titulo;
     @Column(length = 2000, nullable = false)
     private String descricao;
-    @Column(columnDefinition = "DECIMAL(10,2)", nullable = true) // nulo para anúncios de troca ou doação
+    @Column(columnDefinition = "numeric(10,2)", nullable = true) // nulo para anúncios de troca ou doação
     private Double preco;
     @Column(length = 60, nullable = true)
     private String marca;

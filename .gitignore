@@ -12,3 +12,6 @@ dados/
 
 # Maven wrapper baixa a distribuicao aqui
 .mvn/wrapper/maven-wrapper.jar
+
+# Credenciais do banco (Supabase). Nunca commitar.
+.env
