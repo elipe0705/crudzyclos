@@ -1,0 +1,69 @@
+### Listar categorias
+GET http://localhost:8080/api/v1/categorias
+
+### Criar usuário
+POST http://localhost:8080/api/v1/usuarios
+Content-Type: application/json
+
+{
+  "nome": "Ana Souza",
+  "username": "anasouza",
+  "email": "ana@zyclos.app",
+  "senha": "zyclos123",
+  "cidade": "São Paulo",
+  "estado": "SP"
+}
+
+### Listar usuários
+GET http://localhost:8080/api/v1/usuarios
+
+### Criar anúncio
+POST http://localhost:8080/api/v1/anuncios
+Content-Type: application/json
+
+{
+  "titulo": "Jaqueta jeans oversized",
+  "descricao": "Jaqueta jeans azul, pouco usada",
+  "preco": 89.90,
+  "marca": "Levi's",
+  "tamanho": "M",
+  "condicao": "SEMINOVO",
+  "tipoNegociacao": "VENDA",
+  "categoriaId": 3,
+  "vendedorId": 1
+}
+
+### Listar anúncios
+GET http://localhost:8080/api/v1/anuncios
+
+### Listar anúncio por ID
+GET http://localhost:8080/api/v1/anuncios/1
+
+### Atualizar anúncio
+PUT http://localhost:8080/api/v1/anuncios/1
+Content-Type: application/json
+
+{
+  "titulo": "Jaqueta jeans oversized",
+  "descricao": "Jaqueta jeans azul, pouco usada. Baixei o preço!",
+  "preco": 69.90,
+  "marca": "Levi's",
+  "tamanho": "M",
+  "condicao": "SEMINOVO",
+  "tipoNegociacao": "VENDA",
+  "status": "ATIVO",
+  "categoriaId": 3,
+  "vendedorId": 1
+}
+
+### Favoritar anúncio
+POST http://localhost:8080/api/v1/favoritos
+Content-Type: application/json
+
+{
+  "usuarioId": 1,
+  "anuncioId": 1
+}
+
+### Excluir anúncio por ID
+DELETE http://localhost:8080/api/v1/anuncios/1
